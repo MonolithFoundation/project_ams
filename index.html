@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AMS: A Hierarchical Cross-Modal Transformer Architecture with Adaptive Fusion for Fine-grained Video Element
+    Understanding and Retrieval</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AMS: A Hierarchical Cross-Modal Transformer Architecture with
+              Adaptive Fusion for Fine-grained Video Element Understanding and Retrieval</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Fagang Jin</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Shen Wei</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Tong Ye</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous<br>2024</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-weight-hanging"></i>
+                    </span>
+                    <span>Weights</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <source src="static/videos/banner_video.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
+          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+        </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Efficient retrieval of specific elements within long-form video content presents significant challenges in
+              multimedia information processing. This paper introduces AMS (Adaptive Multi-modal Search), a novel
+              framework that seamlessly integrates semantic feature fusion and multi-modal Retrieval-Augmented
+              Generation (RAG) for comprehensive video content understanding and retrieval. Our approach addresses the
+              fundamental limitations in existing video search systems, particularly for extended-duration content, by
+              implementing a hierarchical cross-modal architecture that effectively processes and aligns visual,
+              auditory, and contextual information.
+
+              The proposed framework incorporates three key innovations: (1) a fine-grained semantic fusion mechanism
+              that dynamically integrates character information, scene context, and dialogue content; (2) an adaptive
+              multi-modal RAG system that generates detailed scene descriptions while maintaining temporal coherence;
+              and (3) a hierarchical embedding structure that enables precise temporal localization of query-relevant
+              content within extensive video sequences.
+
+              Experimental results on [Dataset Name] demonstrate that our approach achieves state-of-the-art
+              performance, with a [X%] improvement in retrieval accuracy and a [Y%] reduction in search latency compared
+              to existing methods. The system exhibits robust performance across diverse query types, including visual
+              content, character interactions, plot elements, and dialogue retrieval. Furthermore, our framework
+              demonstrates exceptional scalability, maintaining high precision even with videos exceeding [Z] hours in
+              duration.
+
+              This work represents a significant advancement in video content retrieval, offering practical solutions
+              for applications in media production, content management, and video analytics. The proposed methodology
+              establishes a new paradigm for handling complex, long-form video content while maintaining computational
+              efficiency and retrieval accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+
+  <!-- Image carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              First image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Second image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Third image description.
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+            <h2 class="subtitle has-text-centered">
+              Fourth image description.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End image carousel -->
+
+  <section class="hero hero-body">
+    <div class="container">
+      <div class="container">
+        <div class="hero">
+          <div class="content has-text-justified">
+            <div class="item">
+              <video src="static/AMSSearch.mp4" alt="MY ALT TEXT" autoplay muted loop controls></video>
+              <p class="is-size-6 has-text-centered">
+                AMS able to do person couple with action query on whole video (up to 6 hours)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero hero-body">
+    <div class="container">
+      <div class="container">
+        <div class="hero">
+          <div class="content has-text-justified">
+            <div class="item">
+              <p class="is-size-6 has-text-centered">
+                Efficiency Improvement with AMS
+              </p>
+              <table class="table is-fullwidth is-bordered mt-4">
+                <thead>
+                  <tr>
+                    <th>Workflow Steps</th>
+                    <th>Traditional Method</th>
+                    <th>AMS Solution</th>
+                    <th>Efficiency Gain</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Content Search</td>
+                    <td>Manual scanning through video timeline (30-60 mins)</td>
+                    <td>Instant semantic search with precise timestamp (5-10 seconds)</td>
+                    <td><strong>↓ 98% time</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Scene Analysis</td>
+                    <td>Manual review and note-taking (45-90 mins)</td>
+                    <td>Automated multi-modal understanding with character and plot detection (instant)</td>
+                    <td><strong>↓ 99% time</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Clip Extraction</td>
+                    <td>Manual trimming and exporting (15-30 mins)</td>
+                    <td>Precise timestamp-based extraction (2-3 seconds)</td>
+                    <td><strong>↓ 95% time</strong></td>
+                  </tr>
+                  <tr>
+                    <td>AI Integration</td>
+                    <td>Limited or no AI support</td>
+                    <td>
+                      - Direct integration with editing AI agents<br>
+                      - Automated post-production<br>
+                      - Smart content recommendations
+                    </td>
+                    <td><strong>New capability</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Workflow Automation</td>
+                    <td>Multiple manual steps and tools</td>
+                    <td>
+                      - One-click search and extract<br>
+                      - Automated scene tagging<br>
+                      - Batch processing support
+                    </td>
+                    <td><strong>↓ 90% complexity</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Scalability</td>
+                    <td>Linear time increase with video length</td>
+                    <td>Constant search time regardless of video length</td>
+                    <td><strong>Exponential improvement</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="is-size-7 has-text-centered mt-3">
+                * Results based on average processing time for 2-hour video content
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Youtube video -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End youtube video -->
+
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+
+
+
+
+
+  <!-- Paper poster -->
+  <!-- <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">Poster</h2>
+
+        <iframe src="static/pdfs/sample.pdf" width="100%" height="550">
+        </iframe>
+
+      </div>
+    </div>
+  </section> -->
+  <!--End paper poster -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre>
+        <code>
+@article{Fagang,
+  title={Bumblebee: Advancing Beyond Closed-Source Multi-Modal Models through Token Shrinkage},
+  author={Fagang Jin, Chen Tong, Lin You},
+  year={2024},
+  primaryClass={cs.CV}
+}
+    </code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              Bumbblebee 2024
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
